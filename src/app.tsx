@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement } from './reducer/counter';
-import { RootState } from './reducer/index';
+import { increment, decrement } from './store/counter';
+import { RootState } from './store/index';
 import theme from './styles/theme';
 import image from '../public/img0.jpg';
 

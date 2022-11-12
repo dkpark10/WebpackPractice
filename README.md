@@ -1,4 +1,6 @@
-# webpack + typescript + react + redux + eslint + test 기본설정
+# webpack + typescript + react + eslint + test 기본설정
+
+## 전역상태를 Redux로 관리할 때 쓰는 셋팅
 
 ## .eslintrc.js
 
