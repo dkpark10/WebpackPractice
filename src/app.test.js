@@ -1,17 +1,11 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 import App from './app';
-import rootReducer from './reducer/index';
 
 describe('count', () => {
   const getResult = () => {
-    const store = createStore(rootReducer);
     const result = render(
-      <Provider store={store}>
-        <App />
-      </Provider>,
+      <App />,
     );
 
     return result;

@@ -1,4 +1,4 @@
-# webpack + typescript + react + redux + eslint + test 기본설정
+# webpack + typescript + react + eslint + test 기본설정
 
 ## .eslintrc.js
 
