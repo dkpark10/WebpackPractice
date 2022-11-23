@@ -4,9 +4,7 @@ import App from './app';
 
 describe('count', () => {
   const getResult = () => {
-    const result = render(
-      <App />,
-    );
+    const result = render(<App />);
 
     return result;
   };
