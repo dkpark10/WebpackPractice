@@ -4,10 +4,17 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 // 정적 파일 복사 플러그인
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
+import { resolve } from 'path';
+
+const rootPath = resolve();
+
 export default {
   entry: './src/index.tsx',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+      '@src': resolve(rootPath, './src/'),
+    },
   },
   module: {
     rules: [

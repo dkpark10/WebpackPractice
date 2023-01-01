@@ -27,7 +27,13 @@
     ], // async await 등 es6 이상 문법 사용
     "types": [
       "node"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "src/*",
+      ],
+    },
   },
   "exclude": [
     "node_modules",
