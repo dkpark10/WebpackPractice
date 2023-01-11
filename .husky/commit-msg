@@ -6,7 +6,7 @@ COMMIT_MSG=$(cat "${1:?Missing commit message file}")
 COMMIT_TYPE="${COMMIT_MSG%%:*}"
 
 if [[ "${COMMIT_TYPE}" == *"feat"* ]] || [[ "${COMMIT_TYPE}" == *"test"* ]]; then
-  yarn frontend:test
+  yarn test
 fi  
 
 npx --no -- commitlint --edit "$1"

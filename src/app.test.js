@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import App from './app';
+import { Index } from './index';
 import Counter from './components/counter';
 
 describe('메인 테스트', () => {
   const getResult = () => {
-    const result = render(<App />);
+    const result = render(Index());
     return result;
   };
 

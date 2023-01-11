@@ -1,30 +1,23 @@
-import React, { useState } from 'react';
-import Header from '@src/components/header';
-import Counter from '@src/components/counter';
-import image from '../public/img0.jpg';
+import React, { useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+
+import Home from './page/home';
+import ImageComponent from './page/image_component';
 
 export default function App(): JSX.Element {
-  const [display, setDisplay] = useState<boolean>(false);
-
-  const onShow = () => {
-    setDisplay(true);
-  };
-
-  const onHide = () => {
-    setDisplay(false);
-  };
+  const imgSrc = 'https://s.pstatic.net/static/www/img/uit/sp_weather_time_b8ecd0.png';
+  useEffect(() => {
+    const preloadImage = new Image();
+    preloadImage.src = imgSrc;
+  });
 
   return (
-    <>
-      <Header />
-      <Counter />
-      <img src={image} style={{ width: '100px', height: '100px' }} alt='hwaboon' />
-      <main>
-        <label htmlFor='mode'>{process.env.NODE_ENV}</label>
-      </main>
-      <button type='button' onClick={onShow}>show</button>
-      <button type='button' onClick={onHide}>hide</button>
-      {display && <h1>Lulu</h1>}
-    </>
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route
+        path='/image'
+        render={() => <ImageComponent imgSrc={imgSrc} />}
+      />
+    </Switch>
   );
 }
