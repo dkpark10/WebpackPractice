@@ -1,14 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import App from './app';
 import theme from './styles/theme';
 import './index.css';
 
-export const tmep = {};
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement as HTMLElement);
 
-export function Index() {
+export default function Index() {
   return (
     <React.StrictMode>
       <BrowserRouter>
@@ -20,7 +21,4 @@ export function Index() {
   );
 }
 
-ReactDOM.render(
-  <Index />,
-  document.getElementById('root') || document.createElement('div'),
-);
+root.render(<Index />);

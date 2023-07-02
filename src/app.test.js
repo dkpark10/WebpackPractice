@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { Index } from './index';
+import Index from './index';
 import Counter from './components/counter';
 
 describe('메인 테스트', () => {
