@@ -7,7 +7,6 @@ import theme from './styles/theme';
 import './index.css';
 
 const rootElement = document.getElementById('root') as HTMLElement;
-console.log(rootElement);
 const root = ReactDOM.createRoot(rootElement);
 
 export default function Index() {

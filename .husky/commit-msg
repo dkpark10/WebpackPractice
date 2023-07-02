@@ -5,7 +5,7 @@ COMMIT_MSG=$(cat "${1:?Missing commit message file}")
 
 COMMIT_TYPE="${COMMIT_MSG%%:*}"
 
-if [[ "${COMMIT_TYPE}" == *"feat"* ]] || [[ "${COMMIT_TYPE}" == *"test"* ]]; then
+if [[ "${COMMIT_TYPE}" == *"test"* ]]; then
   yarn test
 fi  
 
