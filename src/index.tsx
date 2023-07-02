@@ -6,9 +6,6 @@ import App from './app';
 import theme from './styles/theme';
 import './index.css';
 
-const rootElement = document.getElementById('root') as HTMLElement;
-const root = ReactDOM.createRoot(rootElement);
-
 export default function Index() {
   return (
     <React.StrictMode>
@@ -21,4 +18,10 @@ export default function Index() {
   );
 }
 
+let rootElement = document.getElementById('root') as HTMLElement;
+if (!rootElement || process.env.TEST === 'true') {
+  rootElement = document.createElement('div');
+  rootElement.id = 'root';
+}
+const root = ReactDOM.createRoot(rootElement);
 root.render(<Index />);
