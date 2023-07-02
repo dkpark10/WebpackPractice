@@ -18,8 +18,8 @@ export default function Index() {
   );
 }
 
-let rootElement = document.getElementById('root') as HTMLElement;
-if (!rootElement || process.env.TEST === 'true') {
+let rootElement = document.getElementById('root');
+if (!rootElement) {
   rootElement = document.createElement('div');
   rootElement.id = 'root';
 }
