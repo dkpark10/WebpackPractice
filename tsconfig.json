@@ -28,6 +28,7 @@
     "types": [
       "jest",
       "node",
+      "cypress",
       "@testing-library/jest-dom",
     ],
     "baseUrl": ".",
@@ -43,6 +44,7 @@
     "./node_modules/**/*"
   ],
   "include": [
+    "./cypress/**/*.ts",
     "./src/**/*",
     "@types"
   ]

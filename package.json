@@ -10,7 +10,9 @@
     "serve:start": "node server.js",
     "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
     "lint:fix": "eslint --fix \"./src/**/*.{ts,tsx,js,jsx}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome --config baseUrl=http://localhost:3000"
   },
   "homepage": "dkpark10.github.io/repo",
   "author": "dkpark10",
@@ -37,6 +39,7 @@
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.5.1",
+    "cypress": "^12.16.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",

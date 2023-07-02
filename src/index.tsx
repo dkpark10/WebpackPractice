@@ -6,8 +6,9 @@ import App from './app';
 import theme from './styles/theme';
 import './index.css';
 
-const rootElement = document.getElementById('root');
-const root = ReactDOM.createRoot(rootElement as HTMLElement);
+const rootElement = document.getElementById('root') as HTMLElement;
+console.log(rootElement);
+const root = ReactDOM.createRoot(rootElement);
 
 export default function Index() {
   return (
