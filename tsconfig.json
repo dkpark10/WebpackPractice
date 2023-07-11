@@ -29,7 +29,6 @@
       "jest",
       "node",
       "cypress",
-      "@testing-library/jest-dom",
     ],
     "baseUrl": ".",
     "paths": {

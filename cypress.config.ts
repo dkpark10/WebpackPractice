@@ -1,4 +1,5 @@
 import { defineConfig } from 'cypress';
+// eslint-disable-next-line import/extensions
 import webpackConfig from './webpack.dev.js';
 
 export default defineConfig({
