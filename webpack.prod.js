@@ -6,7 +6,7 @@ import common from './webpack.common.js';
 export default merge(common, {
   mode: 'production',
   output: {
-    path: path.resolve('build/'),
+    path: path.resolve('dist/'),
     filename: 'app.[contenthash].js',
     // prefix 개념 번들 파일 앞에 요청할 주소 ec2 url 이나 s3
     publicPath: './',
