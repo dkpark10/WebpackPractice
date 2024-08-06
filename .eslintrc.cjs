@@ -6,35 +6,39 @@ module.exports = {
     node: true,
     jest: true,
   },
-  parser: "@typescript-eslint/parser",
-  plugins: ["react", "@typescript-eslint"],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react', '@typescript-eslint'],
   extends: [
-    "airbnb",
-    "airbnb/hooks",
-    "airbnb-typescript",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:storybook/recommended",
+    'airbnb',
+    'airbnb/hooks',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:storybook/recommended',
   ],
   parserOptions: {
-    project: "./tsconfig.json",
+    project: './tsconfig.json',
     tsconfigRootDir: __dirname,
-    sourceType: "module",
+    sourceType: 'module',
     createDefaultProgram: true,
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "jsx-quotes": ["error", "prefer-single"],
-    "import/no-extraneous-dependencies": [
-      "error",
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'jsx-quotes': ['error', 'prefer-single'],
+    'import/no-extraneous-dependencies': [
+      'error',
       {
         devDependencies: true,
       },
     ],
-    "react/jsx-filename-extension": [
-      "error",
+
+    'react/hook-use-state': ['error'],
+
+    'react/jsx-filename-extension': [
+      'error',
       {
-        extensions: [".js", ".ts", ".jsx", ".tsx"],
+        extensions: ['.js', '.ts', '.jsx', '.tsx'],
       },
     ],
     // 'import/extensions': [
@@ -44,13 +48,13 @@ module.exports = {
     //     js: 'never',
     //   },
     // ],
-    "linebreak-style": 0,
+    'linebreak-style': 0,
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-        moduleDirectory: ["node_modules", "@types"],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', '@types'],
       },
     },
   },
