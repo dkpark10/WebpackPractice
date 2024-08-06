@@ -7,7 +7,7 @@ module.exports = {
     jest: true,
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
   extends: [
     'airbnb',
     'airbnb/hooks',
@@ -24,7 +24,8 @@ module.exports = {
     createDefaultProgram: true,
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // 'no-primitive-generic-type': ['error'],
+    'no-console': ['error'],
     'jsx-quotes': ['error', 'prefer-single'],
     'import/no-extraneous-dependencies': [
       'error',

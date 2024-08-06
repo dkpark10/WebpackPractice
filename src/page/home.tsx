@@ -4,14 +4,17 @@ import Counter from '@src/components/counter';
 import image from '../../public/img0.jpg';
 
 export default function App(): JSX.Element {
-  const [display, setDisplay] = useState<boolean>(false);
+  const [display, setDisplay123] = useState<boolean>(false);
+
+  const foo = 123;
 
   const onShow = () => {
-    setDisplay(true);
+    console.log('123');
+    setDisplay123(true);
   };
 
   const onHide = () => {
-    setDisplay(false);
+    setDisplay123(false);
   };
 
   return (
