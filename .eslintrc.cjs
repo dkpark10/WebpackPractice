@@ -7,13 +7,16 @@ module.exports = {
     jest: true,
   },
   parser: '@typescript-eslint/parser',
+  /** @desc plugin은 rule들의 집합 사용하려면 명시하고 rule의 설정해야 해야 함 */
   plugins: ['react', '@typescript-eslint', 'react-hooks'],
+  /** @desc 해당 설정들을 상속받아 바로 사용 가능 */
   extends: [
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
   ],
@@ -35,6 +38,8 @@ module.exports = {
     ],
 
     'react/hook-use-state': ['error'],
+
+    'react/require-default-props': ['off'],
 
     'react/jsx-filename-extension': [
       'error',
