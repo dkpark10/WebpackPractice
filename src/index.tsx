@@ -7,21 +7,21 @@ import theme from './styles/theme';
 import './index.css';
 
 export default function Index() {
-  return (
-    <React.StrictMode>
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>
-          <App />
-        </ThemeProvider>
-      </BrowserRouter>
-    </React.StrictMode>
-  );
+	return (
+		<React.StrictMode>
+			<BrowserRouter>
+				<ThemeProvider theme={theme}>
+					<App />
+				</ThemeProvider>
+			</BrowserRouter>
+		</React.StrictMode>
+	);
 }
 
 let rootElement = document.getElementById('root');
 if (!rootElement) {
-  rootElement = document.createElement('div');
-  rootElement.id = 'root';
+	rootElement = document.createElement('div');
+	rootElement.id = 'root';
 }
 const root = ReactDOM.createRoot(rootElement);
 root.render(<Index />);
