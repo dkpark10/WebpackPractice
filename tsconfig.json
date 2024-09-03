@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
+    "strict": true, // 기본값이 true이기는 하나 원인미상의 이유로 적용이 안되는 경우도 있어 명시적으로 허용
+    "strictPropertyInitialization": true,// 클래스 생성자서 엄격한 초기화
     "target": "es5", // 컴파일 했을 시 생성되는 JS 버전
     "module": "esnext", // import 문법 어떤걸 사용할지??
     "moduleResolution": "node",
     "noResolve": false,
-    "strictNullChecks": true,
-    "noImplicitAny": true, // any 타입 명시 안할 시
+    "noImplicitAny": true, // any 타입 에러 발생 여부
     "removeComments": false, // 컴파일시 주석 제거
     "sourceMap": true,
     "noImplicitReturns": true, // 함수내 모든 경로에서 리턴하지 않을경우 에러
@@ -14,7 +15,8 @@
     "allowSyntheticDefaultImports": true,
     "keyofStringsOnly": true,
     "outDir": "./build", // 컴파일 아웃풋 경로
-    "strictPropertyInitialization": true, // 클래스 생성자에서 타입체크 강하게 여부
+    "declarationMap": false,
+    "declaration": true, // d.ts 파일 생성 여부
     "typeRoots": [
       "./src/types",
       "./node_modules/@types",
@@ -46,5 +48,5 @@
     "./cypress/**/*.ts",
     "./src/**/*",
     "@types"
-  ]
+  ],
 }
